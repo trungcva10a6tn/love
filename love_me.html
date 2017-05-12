@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Love Me</title>
+    <style>
+        .love{
+            margin: 300px;
+            text-align: center;
+        }
+        div{
+            font-size: 20px;
+        }
+        button{
+            position: relative;
+            margin: 20px 5px;
+            padding: 5px 10px;
+        }
+        .no {
+            transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+        }
+        .di{
+            margin-left: 200px;
+            transform: rotate(360deg);
+        }
+        .ve{
+            margin-left: 0px;
+            transform: rotate(360deg);
+        }
+        .chuyen{
+            transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+        }
+        .chuyen:hover{
+            margin-left: 200px;
+            transform: rotate(360deg);
+         }
+    </style>
+</head>
+<body>
+    <div class="love">
+        <div>Do you love me?</div>
+        <button onclick="alert('Biết ngay mà')">Yes</button>
+        <button id="no" class="no" onmouseenter="say_no()">No</button>
+        <br>
+        <button onclick="alert('Biết ngay mà')">Yes</button>
+        <button  class="chuyen" >No</button>
+    </div>
+    <script>
+        var stt=0;
+        function say_no() {
+            if (stt===0){
+                document.getElementById('no').className="no di";
+                stt=1;
+            }else {
+                document.getElementById('no').className="no ve";
+                stt=0
+            }
+        }
+    </script>
+</body>
+</html>
